@@ -1,0 +1,13 @@
+name: Add mask
+on:
+  push:
+    paths: ['.github/workflows/add-mask.yml']
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    env:
+      PASSWORD: SupecialSecretValue
+    steps:
+      - run: echo "::add-mask::${PASSWORD}" # ログ出力時にマスク
+      - run: echo "${PASSWORD}"
+
