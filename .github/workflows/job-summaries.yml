@@ -1,0 +1,13 @@
+name: Job summaries
+on:
+  push:
+    paths: ['.github/workflows/job-summaries.yml']
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - run: | # マークダウンテキストをジョブサマリーへ出力
+          echo "## Example Title :rocket:" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- first line" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- second line" >> "${GITHUB_STEP_SUMMARY}"
+
