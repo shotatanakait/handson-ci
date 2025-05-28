@@ -1,5 +1,7 @@
 name: Debug log
-on: push
+on:
+  push:
+    paths: ['.github/workflows/debug-log.yml']
 jobs:
   log:
     runs-on: ubuntu-latest

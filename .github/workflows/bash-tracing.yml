@@ -1,5 +1,7 @@
 name: Bash tracing
-on: push
+on:
+  push:
+    paths: ['.github/workflows/bash-tracing.yml']
 jobs:
   log:
     runs-on: ubuntu-latest
